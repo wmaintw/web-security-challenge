@@ -17,14 +17,14 @@ end
 get '/administrator/center' do
   redirect '/administrator/signin' if session[:admin_auth_status].nil?
 
-  session[:token_2] = (generate_token CHALLENGE_2) if session[:token_2].nil?
+  session[:token_3] = (generate_token CHALLENGE_3) if session[:token_3].nil?
 
   erb :admin_dashboard
 end
 
 get '/administrator/signout' do
   session[:admin_auth_status] = nil
-  session[:token_2] = nil
+  session[:token_3] = nil
 
   redirect '/administrator/signin'
 end

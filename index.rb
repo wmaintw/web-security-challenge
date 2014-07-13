@@ -15,10 +15,8 @@ CHALLENGE_1 = 1
 CHALLENGE_2 = 2
 CHALLENGE_3 = 3
 CHALLENGE_4 = 4
-
 CHALLENGE_5 = 5
 CHALLENGE_6 = 6
-CHALLENGE_7 = 7
 
 get '/' do
   erb :challenges
@@ -45,7 +43,7 @@ post '/customer/login' do
     session[:message] = nil
     session[:auth_status] = "logged in"
 
-    session[:token_1] = (generate_token CHALLENGE_1) if session[:token_1].nil?
+    session[:token_2] = (generate_token CHALLENGE_2) if session[:token_2].nil?
 
     redirect "/customer/dashboard"
   else
@@ -71,7 +69,7 @@ end
 
 post '/customer/myProfile' do
   if (!params[:uid].nil?) && (!params[:uid].eql?("47290"))
-    session[:token_4] = (generate_token CHALLENGE_4) if session[:token_4].nil?
+    session[:token_5] = (generate_token CHALLENGE_5) if session[:token_5].nil?
     erb :profile, :locals => {:success => true, :name => "Jerry", :role => "QA"}
   else
     erb :profile, :locals => {:message => "Profile refreshed at #{Time.now}", :name => "Tom Cat", :role => "Developer"}
@@ -81,14 +79,14 @@ end
 get '/customer/logout' do
   session[:auth_status] = nil
   session[:tom_auth_status] = nil
-  session[:token_1] = nil
-  session[:token_4] = nil
+  session[:token_2] = nil
+  session[:token_5] = nil
 
   redirect '/customer/login'
 end
 
 get '/test.php' do
-  session[:token_5] = (generate_token CHALLENGE_5) if session[:token_5].nil?
+  session[:token_1] = (generate_token CHALLENGE_1) if session[:token_1].nil?
   erb :hidden_page
 end
 
