@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Management Login</title>
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/signin.css" rel="stylesheet"/>
+  <link href="/css/customize.css" rel="stylesheet"/>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+  <form class="form-signin" role="form" action="/management/login" method="post">
+    <h2 class="form-signin-heading">Management Login</h2>
+    <input id="username" name="username" type="text" class="form-control" placeholder="Username" required autofocus>
+    <input id="password" name="password" type="password" class="form-control" placeholder="Password" required>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  </form>
+
+  <% if (!locals[:success].nil?) %>
+      <div class="panel panel-success congratulation">
+        <div class="panel-heading">Congratulation!</div>
+        <div class="panel-body">
+          <p>You have successfully completed the last challenge!</p>
+
+          <h4>Token</h4>
+
+          <p>
+            Here's your secret token: <strong><%= session[:token_6] %></strong> and submit it to Score Board
+          </p>
+        </div>
+      </div>
+  <% end %>
+
+  <div class="wrapper-center" id="management-footer">
+    <p>
+      <a href="about">About Us</a> |
+      <a href="contact">Contact Us</a> |
+      <a href="privacy">Privacy Policy</a>
+    </p>
+  </div>
+</div>
+
+</body>
+</html>

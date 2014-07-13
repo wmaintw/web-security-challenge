@@ -4,6 +4,7 @@ require 'erubis'
 require './injection'
 require './admin_login'
 require './search'
+require './management'
 
 require 'net/http'
 
@@ -89,6 +90,9 @@ get '/test.php' do
   session[:token_1] = (generate_token CHALLENGE_1) if session[:token_1].nil?
   erb :hidden_page
 end
+
+
+
 
 def normal_login? usr, pwd
   usr.eql?("tom") && pwd.eql?("cat")

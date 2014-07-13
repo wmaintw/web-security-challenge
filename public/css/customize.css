@@ -30,6 +30,10 @@ body {
     margin: auto;
     margin-top: 30px;
 }
+.challenge-description:last-child {
+    margin-bottom: 100px;
+}
+
 #remind-submit-token {
     margin-top: 25px;
     margin-bottom: 25px;
@@ -42,6 +46,15 @@ body {
 
 #mocked-phpinfo {
     width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#management-footer {
+    margin-top: 100px;
+}
+
+#contact {
+    width: 300px;
     margin-left: auto;
     margin-right: auto;
 }
