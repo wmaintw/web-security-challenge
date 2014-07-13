@@ -16,13 +16,16 @@
 
   <div class="text-center" id="welcome-message">
     <h1>Welcome to Web Security Challenge Website!</h1>
+
     <p>
       In this website, there are 4 security flaws, try to find them, have fun!
     </p>
+
     <p id="remind-submit-token">
       <span class="alert alert-warning">
         <span class="glyphicon glyphicon-warning-sign"></span> <strong>Heads up!</strong> Once you complete any challenge, a secret token will be assign to you,
-        please follow instruction to <a class="text-primary" href="http://10.17.7.3:9000/score" target="_blank">submit it</a>.
+        please follow instruction to <a class="text-primary" href="http://10.17.7.3:9000/score" target="_blank">submit
+        it</a>.
       </span>
     </p>
   </div>
@@ -31,44 +34,83 @@
 
   <div class="challenge-description">
     <h4>Challenge 1, SQL Injection</h4>
+
     <p>
-      The password field is SQL Injection vulnerable, try login the system (username: <strong>Jerry</strong>) by SQL Injection, without using correct password.<br />
+      The password field is SQL Injection vulnerable, try login the system (username: <strong>Jerry</strong>) by SQL
+      Injection, without using correct password.<br/>
     </p>
-    <p><a href="/customer/login" target="_blank" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-play"></span> Click here to start</a></p>
+
+    <p>
+      <a href="/customer/login" target="_blank" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-play"></span>
+        Click here to start</a></p>
   </div>
 
   <div class="challenge-description">
     <h4>Challenge 2, Hidden Admin Management URL & Careless Developer</h4>
+
     <div>
       <p>
-        <strong>Part 1:</strong> Admin manage URL was hidden, try to find clue and access that URL.<br />
+        <strong>Part 1:</strong> Admin manage URL was hidden, try to find clue and access that URL.<br/>
         <strong>Hint:</strong> You know there are some 'common' files in website...
       </p>
+
       <p>
-        <strong>Part 2:</strong> When you find the hidden manage URL, try to login as admin user.<br />
-        <strong>Hint:</strong> No security flaws in the login process, but developers are notorious for leaving statements
+        <strong>Part 2:</strong> When you find the hidden manage URL, try to login as admin user.<br/>
+        <strong>Hint:</strong> No security flaws in the login process, but developers are notorious for leaving
+        statements
         like FIXME's, TODO's, Code Broken, Hack, etc... inside the source code.
       </p>
-      <p><a href="/customer/login" target="_blank" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-play"></span> Click here to start</a></p>
+
+      <p>
+        <a href="/customer/login" target="_blank" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-play"></span>
+          Click here to start</a></p>
     </div>
   </div>
 
   <div class="challenge-description">
     <h4>Challenge 3, Cross-Site Scripting</h4>
+
     <p>
       Cross-Site Scripting vulnerability exist in product search page,
       try to popup a javascript alert window by this vulnerability.
     </p>
-    <p><a href="/product/search" target="_blank" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-play"></span> Click here to start</a></p>
+
+    <p>
+      <a href="/product/search" target="_blank" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-play"></span>
+        Click here to start</a></p>
   </div>
 
   <div class="challenge-description">
     <h4>Challenge 4, Missing Function Level Access Control</h4>
+
     <p>
-      Users in this website are not allowed to view other user's profile, but the access control is missing or insufficient.<br />
+      Users in this website are not allowed to view other user's profile, but the access control is missing or
+      insufficient.<br/>
       Login as user <strong>Tom</strong> (username: tom / password: cat), and try to view other user's profile.
     </p>
-    <p><a href="/customer/login" target="_blank" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-play"></span> Click here to start</a></p>
+
+    <p>
+      <a href="/customer/login" target="_blank" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-play"></span>
+        Click here to start</a></p>
+  </div>
+
+  <div class="challenge-description">
+    <h4>Challenge 5, The Hidden Page</h4>
+
+    <p>
+      Sometimes, the developer or website administrator adds web pages to help them develop their web app or collect
+      information of web app or web server or even the operation system information. But after product release, they
+      forget to delete these pages, and this could be very helpful for
+      hackers once they been found.
+    </p>
+
+    <p>
+      The url of these pages are very easy to guess, try to find it.
+    </p>
+
+    <p>
+      <a href="/customer/login" target="_blank" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-play"></span>
+        Click here to start</a></p>
   </div>
 
 </div>

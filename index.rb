@@ -16,6 +16,10 @@ CHALLENGE_2 = 2
 CHALLENGE_3 = 3
 CHALLENGE_4 = 4
 
+CHALLENGE_5 = 5
+CHALLENGE_6 = 6
+CHALLENGE_7 = 7
+
 get '/' do
   erb :challenges
 end
@@ -81,6 +85,11 @@ get '/customer/logout' do
   session[:token_4] = nil
 
   redirect '/customer/login'
+end
+
+get '/test.php' do
+  session[:token_5] = (generate_token CHALLENGE_5) if session[:token_5].nil?
+  erb :hidden_page
 end
 
 def normal_login? usr, pwd

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PHPINFO</title>
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/customize.css" rel="stylesheet"/>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="panel panel-success congratulation">
+    <div class="panel-heading">Congratulation!</div>
+    <div class="panel-body">
+      <p>You have found the hidden test page! Please see
+        <a href="https://www.owasp.org/index.php/Top_10_2013-A5-Security_Misconfiguration" target="_blank">Security
+          Misconfiguration</a> for reference.
+      </p>
+
+      <h4>What is Security Misconfiguration</h4>
+
+      <p>
+        Good security requires having a secure configuration defined and deployed for the application, frameworks,
+        application server, web server, database server, and platform. Secure settings should be defined, implemented,
+        and maintained, as defaults are often insecure. Additionally, software should be kept up to date.
+      </p>
+
+      <h4>Token</h4>
+
+      <p>
+        Here's your secret token: <strong><%= session[:token_5] %></strong> and submit it to Score Board
+      </p>
+    </div>
+  </div>
+
+  <div class="wrapper-center">
+    <img src="img/phpinfo.png" id="mocked-phpinfo" />
+  </div>
+
+</div>
+
+</body>
+</html>
