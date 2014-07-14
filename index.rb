@@ -87,6 +87,19 @@ get '/customer/logout' do
   redirect '/customer/login'
 end
 
+get '/reset' do
+  session[:auth_status] = nil
+  session[:tom_auth_status] = nil
+  session[:token_1] = nil
+  session[:token_2] = nil
+  session[:token_3] = nil
+  session[:token_4] = nil
+  session[:token_5] = nil
+  session[:token_6] = nil
+
+  redirect '/'
+end
+
 
 def normal_login? usr, pwd
   usr.eql?("tom") && pwd.eql?("cat")
