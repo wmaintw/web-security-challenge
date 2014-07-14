@@ -22,6 +22,10 @@
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
   </form>
 
+  <% if (!locals[:message].nil?) %>
+    <p class="wrapper-center"><%= locals[:message] %></p>
+  <% end %>
+
   <% if (!locals[:success].nil?) %>
       <div class="panel panel-success congratulation">
         <div class="panel-heading">Congratulation!</div>

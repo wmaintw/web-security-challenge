@@ -8,7 +8,7 @@ post '/management/login' do
     session[:token_6] = (generate_token CHALLENGE_6) if session[:token_6].nil?
     erb :management_login, :locals => {:success => true}
   else
-    erb :management_login, :locals => {:success => nil}
+    erb :management_login, :locals => {:success => nil, :message => "Sorry, incorrect username and password."}
   end
 end
 
