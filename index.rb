@@ -5,6 +5,7 @@ require './injection'
 require './admin_login'
 require './search'
 require './management'
+require './hidden'
 
 require 'net/http'
 
@@ -85,13 +86,6 @@ get '/customer/logout' do
 
   redirect '/customer/login'
 end
-
-get '/test.php' do
-  session[:token_1] = (generate_token CHALLENGE_1) if session[:token_1].nil?
-  erb :hidden_page
-end
-
-
 
 
 def normal_login? usr, pwd
