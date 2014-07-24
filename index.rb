@@ -12,7 +12,7 @@ require 'net/http'
 enable :sessions
 
 set :bind, "0.0.0.0"
-set :port, "8000"
+set :port, "80"
 
 CHALLENGE_1 = 1
 CHALLENGE_2 = 2
