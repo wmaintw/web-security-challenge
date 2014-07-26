@@ -4,7 +4,7 @@ get '/management/login' do
 end
 
 post '/management/login' do
-  if (params[:username].eql? "admin") && (params[:password].eql? "64072011")
+  if (params[:username].eql? "admin") && (params[:password].eql? "56933000")
     session[:token_6] = (generate_token CHALLENGE_6) if session[:token_6].nil?
     erb :management_login, :locals => {:success => true}
   else
