@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Challenges</title>
+  <title>安全攻防营</title>
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/customize.css" rel="stylesheet"/>
   <script src="/js/jquery.min.js"></script>
@@ -15,25 +15,17 @@
 <div class="container">
 
   <div class="text-center" id="welcome-message">
-    <h1>Welcome to Web Security Challenge Website!</h1>
+    <h1>欢迎来到安全攻防营!</h1>
 
     <p>
-      In this website, there are several security flaws, try to find them, have fun!
+      这个网站存在着好几个安全漏洞, 你的目标就是找出这些漏洞, 祝你玩得开心!
     </p>
 
     <p id="remind-submit-token">
       <span class="alert alert-warning">
-        <span class="glyphicon glyphicon-warning-sign"></span> <strong>Heads up!</strong> Once you complete any challenge, a secret token will be assign to you,
-        please follow instruction to <a class="text-primary" href="http://192.168.5.10:9000/score" target="_blank">submit
-        it</a>.
-      </span>
-    </p>
-
-    <br />
-
-    <p>
-      <span class="alert alert-warning">
-        If you want to reset all these challenges, please <a href="/reset">click here</a>.
+        <span class="glyphicon glyphicon-warning-sign"></span> <strong>注意!</strong> 在你找到安全漏洞之后, 会有一个Token分配给你,
+        请把它提交到 <a class="text-primary" href="http://192.168.5.10:9000/score" target="_blank">英雄榜
+      </a> 上，会有礼品赠送哦.
       </span>
     </p>
   </div>
@@ -41,103 +33,128 @@
   <hr/>
 
   <div class="challenge-description">
-    <h4>Challenge 1, The Temporary Page</h4>
+    <div class="challenge-title">
+      <div>漏洞 1, 寻找忘记删除掉的页面</div>
+      <span class="label label-success">难度系数：初级</span>
+    </div>
 
     <p>
-      Sometimes, the developer or website administrator adds web pages to help them develop their web app or collect
-      information of web app or web server or even the operation system information. But after product release, they
-      forget to delete these pages, and this could be very helpful for
-      hackers once they been found.
+      有些时候，开发人员或者网站管理员为了图方便，在网站上加入了一些临时的网页用于进行测试，或者辅助开发。但是在产品发布的时候却忘记删除掉这样的页面了。
+      你的目标就是通过猜测URL，寻找这样的临时页面。
     </p>
 
     <p>
-      The url of these pages are very easy to guess, think about common filenames, and try to find it.
+      <strong>提示：</strong> 这样的临时网页的URL一般都比较容易猜测得到，想想网页的URL可能用到哪些高频词汇？
     </p>
 
     <p>
       <a href="/find-the-hidden-page.php" target="_blank" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-play"></span>
-        Click here to start</a></p>
+        点击这里开始游戏</a></p>
   </div>
 
   <div class="challenge-description">
-    <h4>Challenge 2, SQL Injection</h4>
+    <div class="challenge-title">
+      <div>漏洞 2, SQL 注入</div>
+      <span class="label label-success">难度系数：初级</span>
+    </div>
 
     <p>
-      The password field is SQL Injection vulnerable, try login the system (username: <strong>Jerry</strong>) by SQL
-      Injection, without using correct password.<br/>
+      用户登录页面中的密码输入框是有SQL注入漏洞的，尝试利用SQL注入漏洞登录进入Jerry（用户名：<strong>jerry</strong>）的账号。
+    </p>
+
+    <p>
+      <strong>提示：</strong> 登录页面的文本输入框有输入长度的限制，但这仅仅是UI层面的限制，可以利用Proxy工具或者浏览器开发者工具进行修改、绕过。
     </p>
 
     <p>
       <a href="/customer/login" target="_blank" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-play"></span>
-        Click here to start</a></p>
+        点击这里开始游戏</a></p>
   </div>
 
   <div class="challenge-description">
-    <h4>Challenge 3, Hidden Admin Management URL & Careless Developer</h4>
+    <div class="challenge-title">
+      <div>漏洞 3, 粗心大意的程序员</div>
+      <span class="label label-success">难度系数：初级</span>
+    </div>
 
     <div>
       <p>
-        <strong>Part 1:</strong> Admin manage URL was hidden, try to find clue and access that URL.<br/>
-        <strong>Hint:</strong> You know there are some 'common' files in website...
+        <strong>第一部分:</strong> 你的目标是要找到这个网站的管理后台<br/>
+        <strong>提示:</strong> 网站当中的某些部分是不希望暴露给搜索引擎的，但是相关的配置可能正好会泄露某些秘密。
       </p>
 
       <p>
-        <strong>Part 2:</strong> When you find the hidden manage URL, try to login as admin user.<br/>
-        <strong>Hint:</strong> No security flaws in the login process, but developers are notorious for leaving
-        statements
-        like FIXME's, TODO's, Code Broken, Hack, etc... inside the source code.
+        <strong>第二部分:</strong> 当你找到网站的管理后台之后，尝试登录到管理后台里面去。<br/>
+        <strong>提示:</strong> 管理后台没有SQL注入这类安全漏洞，但是开发管理后台的程序员有些粗心大意，在网页源码里留下了TODO、FIXME等注释信息……
       </p>
 
       <p>
         <a href="/customer/login" target="_blank" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-play"></span>
-          Click here to start</a></p>
+          点击这里开始游戏</a></p>
     </div>
   </div>
 
   <div class="challenge-description">
-    <h4>Challenge 4, Cross-Site Scripting</h4>
+    <div class="challenge-title">
+      <div>漏洞 4, 跨站脚本漏洞</div>
+      <span class="label label-warning">难度系数：中级</span>
+    </div>
 
     <p>
-      Cross-Site Scripting vulnerability exist in product search page,
-      try to popup a javascript alert window by this vulnerability.
+      产品搜索页面里存在一个跨站脚本漏洞，你的目标是要找到这个漏洞，并且让页面弹出一个Alert窗口。
     </p>
 
     <p>
       <a href="/product/search" target="_blank" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-play"></span>
-        Click here to start</a></p>
+        点击这里开始游戏</a></p>
   </div>
 
   <div class="challenge-description">
-    <h4>Challenge 5, Missing Function Level Access Control</h4>
+    <div class="challenge-title">
+      <div>漏洞 5, 服务器端权限验证缺失</div>
+      <span class="label label-warning">难度系数：中级</span>
+    </div>
 
     <p>
-      Users in this website are not allowed to view other user's profile, but the access control is missing or
-      insufficient.<br/>
-      Login as user <strong>Tom</strong> (username: tom / password: cat), and try to view other user's profile.
+      网站不允许当前用户查看其他用户的敏感信息，但是身份权限验证没有做好，存在安全问题。<br/>
+      你的目标是，以用户<strong>Tom</strong> (用户名: tom / 密码: cat)登录到网站里去，并且尝试查看其他用户的敏感信息。
     </p>
 
     <p>
       <a href="/customer/login" target="_blank" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-play"></span>
-        Click here to start</a></p>
+        点击这里开始游戏</a></p>
   </div>
 
   <div class="challenge-description">
-    <h4>Challenge 6, Little Leaks Sink The Ship</h4>
+    <div class="challenge-title">
+      <div>漏洞 6, 千里之堤毁于蚁穴</div>
+      <span class="label label-danger">难度系数：高级</span>
+    </div>
 
     <p>
-      There's no security flaw in the management login page, this means you can not use sql injection to bypass it, no
-      XSS, no CSRF, and so on.
+      管理界面的经过各种修改之后已经没有安全漏洞了，这意味着没有SQL注入漏洞，开发者也把一切敏感信息删除掉了，真的没有安全漏洞了。
+      你现在的目标就是寻找线索，登录到管理后台里去。
     </p>
 
     <p>
-      But you know, little leaks sink the ship, so try to find clues and login management system.
+      <strong>提示:</strong> 就算在技术上做到了100%安全，但是使用应用程序的是人，人是容易犯一些低级错误的，这时候人就变成了木桶最短的那块板了。
     </p>
 
     <p>
       <a href="/management/login" target="_blank" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-play"></span>
-        Click here to start</a></p>
+        点击这里开始游戏</a></p>
   </div>
 
+  <div class="challenge-description text-center">
+    <hr/>
+    <br/>
+
+    <p>
+      <span class="alert alert-warning">
+        <a href="/reset">点击这里</a> 重置所有的安全漏洞.
+      </span>
+    </p>
+  </div>
 
 </div>
 

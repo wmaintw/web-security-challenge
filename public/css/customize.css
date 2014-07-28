@@ -25,6 +25,12 @@ body {
 #welcome-message {
     margin-top: -40px;
 }
+
+.challenge-title div {
+    font-size: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
 .challenge-description {
     max-width: 750px;
     margin: auto;
