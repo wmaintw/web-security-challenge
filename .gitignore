@@ -7,3 +7,4 @@ log/
 tmp/
 
 Gemfile.lock
+nohup.out
