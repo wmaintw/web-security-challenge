@@ -75,7 +75,7 @@ post '/customer/myProfile' do
     session[:token_5] = (generate_token CHALLENGE_5) if session[:token_5].nil?
     erb :profile, :locals => {:success => true, :name => "Jerry", :role => "Manager", :salary => "15000"}
   else
-    erb :profile, :locals => {:message => "您的账号信息已于 #{Time.now} 被成功刷新了", :name => "Tom Cat", :role => "Developer", :salary => "8800"}
+    erb :profile, :locals => {:message => "Profile updated at #{Time.now}", :name => "Tom Cat", :role => "Developer", :salary => "8800"}
   end
 end
 
