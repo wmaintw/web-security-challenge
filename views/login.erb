@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Secure Sign In</title>
+  <title>漏洞2-SQL注入</title>
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/signin.css" rel="stylesheet"/>
   <script src="/js/jquery.min.js"></script>
@@ -15,11 +15,11 @@
 <div class="container">
 
   <form class="form-signin" role="form" action="login" method="post">
-    <h2 class="form-signin-heading">Please Sign In</h2>
+    <h2 class="form-signin-heading">请登录</h2>
     <span class="text-danger" id="messageLabel"><%== session[:message] %></span>
     <input id="username" name="username" type="text" maxlength="8" value="" class="form-control" placeholder="Username" required autofocus>
     <input id="password" name="password" type="password" maxlength="8" value="" class="form-control" placeholder="Password" required>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
   </form>
 
 </div>

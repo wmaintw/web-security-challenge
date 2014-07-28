@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dashboard</title>
+  <title>漏洞2-SQL注入</title>
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/customize.css" rel="stylesheet">
   <script src="/js/jquery.min.js"></script>
@@ -22,7 +22,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Web Security Challenge</a>
+      <a class="navbar-brand" href="#">安全攻防营</a>
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -37,7 +37,7 @@
 <div class="container">
 
   <div class="panel panel-success congratulation">
-    <div class="panel-heading">Congratulation!</div>
+    <div class="panel-heading">恭喜!</div>
     <div class="panel-body">
       <p>You have logged in as Jerry without using correct password by
         <a href="https://www.owasp.org/index.php/SQL_Injection" target="_blank">SQL Injection</a>.
@@ -60,7 +60,9 @@
 
       <h4>Token</h4>
       <p>
-        Here's your secret token: <strong><%= session[:token_2] %></strong> and submit it to the Score Board.
+        <div class="alert alert-warning">
+        <span class="text-danger"><strong>重要</strong>:这是你的Token: <strong><%= session[:token_2] %></strong> ，请复制下来并且到英雄榜上提交。</span>
+        </div>
       </p>
     </div>
   </div>
