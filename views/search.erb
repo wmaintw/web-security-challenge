@@ -4,10 +4,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Search a product</title>
+  <title>漏洞4-跨站脚本漏洞</title>
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/customize.css" rel="stylesheet"/>
-
   <script src="/js/jquery.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
 </head>
@@ -19,10 +18,10 @@
     <form action="/product/search" method="post" class="form-inline" role="form">
 
       <div class="form-group">
-        <label>Search keyword:</label>
+        <label>输入关键字:</label>
         <input type="text" value="<%= locals[:k] %>" id="k" name="k" class="form-control"/>
       </div>
-      <input type="submit" value="Search" class="btn btn-primary"/>
+      <input type="submit" value="搜索" class="btn btn-primary"/>
 
     </form>
   </div>
@@ -32,7 +31,7 @@
 
   <% if !locals[:k].nil? %>
       <div id="search-result">
-        <p class="text-center text-primary">Search result: no record found.</p>
+        <p class="text-center text-primary">搜索结果: 对不起，没有找到相关记录.</p>
       </div>
   <% end %>
 </div>

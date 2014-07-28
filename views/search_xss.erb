@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Search a product</title>
+  <title>漏洞4-跨站脚本漏洞</title>
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/customize.css" rel="stylesheet"/>
   <script src="/js/jquery.min.js"></script>
@@ -15,11 +15,11 @@
 <div class="container">
 
   <div class="panel panel-success congratulation">
-    <div class="panel-heading">Congratulation!</div>
+    <div class="panel-heading">恭喜!</div>
     <div class="panel-body">
-      <p>You have found XSS flaw! Please see
+      <p>你成功发现了跨站脚本漏洞！这是关于这个漏洞的详细资料：
         <a href="https://www.owasp.org/index.php/Top_10_2013-A3-Cross-Site_Scripting_(XSS)" target="_blank">Cross-Site
-          Scripting</a> for reference.
+          Scripting</a>
       </p>
 
       <h4>What is Cross-Site Scripting</h4>
@@ -44,7 +44,9 @@
       <h4>Token</h4>
 
       <p>
-        Here's your secret token: <strong><%= session[:token_4] %></strong> and submit it to Score Board
+      <div class="alert alert-warning">
+        <span class="text-danger"><strong>重要</strong>:这是你的Token: <strong><%= session[:token_4] %></strong> ，请复制下来并且到英雄榜上提交。</span>
+      </div>
       </p>
     </div>
   </div>
