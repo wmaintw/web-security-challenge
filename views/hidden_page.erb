@@ -15,11 +15,11 @@
 <div class="container">
 
   <div class="panel panel-success congratulation">
-    <div class="panel-heading">Congratulation!</div>
+    <div class="panel-heading">恭喜!</div>
     <div class="panel-body">
-      <p>You have found the hidden test page! Please see
+      <p>你找到了这个忘记被删除掉的测试页面了! 这是关于这个漏洞的更详细的信息：
         <a href="https://www.owasp.org/index.php/Top_10_2013-A5-Security_Misconfiguration" target="_blank">Security
-          Misconfiguration</a> for reference.
+          Misconfiguration</a>
       </p>
 
       <h4>What is Security Misconfiguration</h4>
@@ -33,7 +33,7 @@
       <h4>Token</h4>
 
       <p>
-        Here's your secret token: <strong><%= session[:token_1] %></strong> and submit it to Score Board
+        <span class="text-danger"><strong>重要</strong>:这是你的Token: <strong><%= session[:token_1] %></strong> ，请复制下来并且到英雄榜上提交。</span>
       </p>
     </div>
   </div>
