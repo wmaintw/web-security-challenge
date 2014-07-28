@@ -22,12 +22,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Web Security Challenge</a>
+      <a class="navbar-brand" href="#">安全攻防营</a>
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/customer/myProfile">My Profile</a></li>
-        <li><a href="/customer/logout">Log out</a></li>
+        <li class="active"><a href="/customer/myProfile">我的账号信息</a></li>
+        <li><a href="/customer/logout">注销</a></li>
       </ul>
     </div>
   </div>
@@ -37,14 +37,15 @@
 
   <div class="panel panel-default" id="profile">
     <div class="panel-heading">
-      <span>My Profile</span>
-      <span class="text-primary"><%= locals[:message] %></span>
+      <span>我的账号信息</span>
+      <span class="text-danger"><%= locals[:message] %></span>
     </div>
     <div class="panel-body">
 
       <div class="row">
-        <div class="col-md-2">Name: <%= locals[:name] %></div>
-        <div class="col-md-2">Role: <%= locals[:role] %></div>
+        <div class="col-md-2">姓名: <%= locals[:name] %></div>
+        <div class="col-md-2">职位: <%= locals[:role] %></div>
+        <div class="col-md-2">薪水: <%= locals[:salary] %></div>
       </div>
       <div class="row">
         <hr/>
@@ -52,7 +53,7 @@
       <div class="row">
         <div class="col-md-4">
           <form action="/customer/myProfile" method="post">
-            <input type="submit" value="Refresh Profile" class="btn btn-info"/>
+            <input type="submit" value="刷新" class="btn btn-info"/>
             <input type="hidden" id="uid" name="uid" value="47290"/>
           </form>
         </div>
@@ -63,7 +64,7 @@
 
   <% if (!locals[:success].nil?) %>
       <div class="panel panel-success congratulation">
-        <div class="panel-heading">Congratulation!</div>
+        <div class="panel-heading">恭喜!</div>
         <div class="panel-body">
           <p>You have successfully bypass the poor access control by modify hidden uid field. For more detail, please
             see
@@ -90,7 +91,9 @@
           <h4>Token</h4>
 
           <p>
-            Here's your secret token: <strong><%= session[:token_5] %></strong> and submit it to Score Board
+          <div class="alert alert-warning">
+            <span class="text-danger"><strong>重要</strong>:这是你的Token: <strong><%= session[:token_5] %></strong> ，请复制下来并且到英雄榜上提交。</span>
+          </div>
           </p>
         </div>
       </div>

@@ -67,15 +67,15 @@ end
 
 get '/customer/myProfile' do
   redirect '/customer/login' if session[:tom_auth_status].nil?
-  erb :profile, :locals => {:name => "Tom Cat", :role => "Developer"}
+  erb :profile, :locals => {:name => "Tom Cat", :role => "Developer", :salary => "8800"}
 end
 
 post '/customer/myProfile' do
   if (!params[:uid].nil?) && (!params[:uid].eql?("47290"))
     session[:token_5] = (generate_token CHALLENGE_5) if session[:token_5].nil?
-    erb :profile, :locals => {:success => true, :name => "Jerry", :role => "QA"}
+    erb :profile, :locals => {:success => true, :name => "Jerry", :role => "Manager", :salary => "15000"}
   else
-    erb :profile, :locals => {:message => "Profile refreshed at #{Time.now}", :name => "Tom Cat", :role => "Developer"}
+    erb :profile, :locals => {:message => "您的账号信息已于 #{Time.now} 被成功刷新了", :name => "Tom Cat", :role => "Developer", :salary => "8800"}
   end
 end
 
