@@ -2,7 +2,7 @@ get '/find-admin-login-page' do
   erb :find_admin_login
 end
 
-get '/administrator/signin' do
+get '/admin' do
   erb :admin_login
 end
 
